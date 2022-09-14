@@ -1,0 +1,2 @@
+String? firebaseToken = "";
+String? deviceId = "";

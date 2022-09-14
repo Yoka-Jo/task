@@ -1,0 +1,21 @@
+Use Cases (Done)
+
+Mappers
+    login toDomain
+    register toDomain
+    getServices toDomain
+    activeEmailOrPhone toDomain
+    activeAccount toDomain
+
+Dio Factory (Done)
+App Api
+Remote Data Source
+Repository Impl
+
+Cubit
+    login Cubit
+    register Cubit
+    acitive email account Cubit
+    active phone account Cubit
+    acive account Cubit
+    get Services account Cubit

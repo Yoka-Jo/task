@@ -1,0 +1,15 @@
+{
+  "data": {
+    "user": {
+      "id": 110,
+      "name": "Yousef",
+      "phone": "01020913878",
+      "email": "ym8370302@gmail.com",
+      "image": "https://mawasims.com.sa/storage/user/default.png",
+      "is_notifiy": true
+    },
+    "token": "258|13mwcyrrFjYhZxRqQAAI0rpvD7f3lH8E2wmpsFT6"
+  },
+  "message": "تم تسجيل الدخول بنجاح",
+  "status": true
+}
