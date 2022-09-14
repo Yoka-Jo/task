@@ -17,18 +17,18 @@ class RegisterScreen extends StatelessWidget {
         resizeToAvoidBottomInset: false,
         body: BuildBackGroundImage(
           foregroundImage: ImagesAsset.cleanWorker,
-          foregroundImageHeight: MediaQuery.of(context).size.height * 0.231,
+          foregroundImageHeight: 180,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
-            children: const [
-              BuildText(text: AppStrings.welcome),
-              BuildSubText(text: AppStrings.createAccountToStart),
-              SizedBox(height: 30.0),
-              BuildTitleForFormFields(text: AppStrings.newRegisteration),
-              SizedBox(height: 20.0),
-              BuildRegisterFormFields(),
-              BuildRegisterButton(),
-              BuildHaveAccountText(),
+            children: [
+              const BuildText(text: AppStrings.welcome),
+              const BuildSubText(text: AppStrings.createAccountToStart),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+              const BuildTitleForFormFields(text: AppStrings.newRegisteration),
+              const SizedBox(height: 20.0),
+              const BuildRegisterFormFields(),
+              const BuildRegisterButton(),
+              const BuildHaveAccountText(),
             ],
           ),
         ),

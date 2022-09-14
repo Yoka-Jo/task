@@ -1,4 +1,6 @@
 import 'dart:developer';
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:platform_device_id/platform_device_id.dart';
 import 'package:task/app/dependency_injection.dart';
@@ -36,6 +38,9 @@ void main() async {
   FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
 
   runApp(
-    const MyApp(), // Wrap your app
+    DevicePreview(
+      enabled: !kReleaseMode,
+      builder: (context) => const MyApp(), // Wrap your app
+    ),
   );
 }

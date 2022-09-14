@@ -18,21 +18,26 @@ class BuildBackGroundImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
-      ListView(
-        physics: const NeverScrollableScrollPhysics(),
+      Column(
         children: [
           const SizedBox(
             height: 20.0,
           ),
-          Image.asset(
-            ShapePatternsAsset.background,
-            fit: BoxFit.cover,
-            width: double.infinity,
+          Expanded(
+            flex: 2,
+            child: Image.asset(
+              ShapePatternsAsset.background,
+              fit: BoxFit.fill,
+              width: double.infinity,
+            ),
           ),
-          Image.asset(
-            ShapePatternsAsset.wave,
-            width: double.infinity,
-            fit: BoxFit.cover,
+          Expanded(
+            flex: 1,
+            child: Image.asset(
+              ShapePatternsAsset.wave,
+              width: double.infinity,
+              fit: BoxFit.fill,
+            ),
           ),
         ],
       ),
