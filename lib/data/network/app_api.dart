@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:dio/dio.dart';
 import 'package:task/app/constants.dart';
 import 'package:task/data/network/requests.dart';
@@ -27,24 +25,16 @@ class AppApiImpl implements AppApi {
 
   @override
   Future<LoginResponse> login(LoginRequest loginRequest) async {
-    try {
-      final response =
-          await _dio.post(Constants.loginPath, data: loginRequest.toJson());
-      final data = LoginResponse.fromJson(response.data);
-      log(data.data.toString());
-      return data;
-    } catch (e) {
-      log(e.toString());
-      rethrow;
-    }
+    final response =
+        await _dio.post(Constants.loginPath, data: loginRequest.toJson());
+    return LoginResponse.fromJson(response.data);
   }
 
   @override
   Future<RegisterResponse> register(RegisterRequest registerRequest) async {
     final response =
         await _dio.post(Constants.registerPath, data: registerRequest.toJson());
-    final data = RegisterResponse.fromJson(response.data);
-    return data;
+    return RegisterResponse.fromJson(response.data);
   }
 
   @override
