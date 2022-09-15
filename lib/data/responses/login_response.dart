@@ -34,25 +34,7 @@ class LoginResponse {
               : null)
           : null,
       message: json["message"],
-      status: json["status"],
+      status: statusBool(json["status"]),
     );
   }
 }
-
-/*
-{
-    "data": {
-        "user": {
-            "id": 110,
-            "name": "Yousef",
-            "phone": "01020913878",
-            "email": "ym8370302@gmail.com",
-            "image": "https://mawasims.com.sa/storage/user/default.png",
-            "is_notifiy": true
-        },
-        "token": "231|zgGkCGxn3onxcJxvFMd7zytjqdsLbvW5txR1hFUL"
-    },
-    "message": "تم تسجيل الدخول بنجاح",
-    "status": true
-}
-*/
